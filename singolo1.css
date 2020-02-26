@@ -22,7 +22,7 @@ body {
 .logo {
 	font-size: 25px;
 	line-height: 6px;	
-	letter-spacing: 0.01em;
+	letter-spacing: -0.5px;
 }
 
 .logo_symbol,
@@ -51,13 +51,26 @@ color: #f06c64;
 	background-color: #f06c64;
 	height: 594px;
 	border-bottom: 6px solid #ea676b;
+	display: flex;
 }
 
-.slider .wrapper {
-	display: flex;
+.slider_wrapper {
+	display: inline-flex;
 	align-items: center;
+	margin: auto;
 	justify-content: space-between;
-	padding-top: 50px;
+}
+
+.phone_vertical {
+	position: relative;
+    right: 35px;
+    bottom: 2px;
+}
+
+.phone_horizontal {
+	position: relative;
+	left: 35px;
+    bottom: 1px;
 }
 
 .slider_arrow {
@@ -65,13 +78,20 @@ color: #f06c64;
     height: 27px;
   	background: url("assets/images/back.svg") no-repeat;
  	border: none;
- 	cursor: pointer;
+	cursor: pointer;
+	position: relative;
 }
 
 .arrow_right {
 	transform: rotate(180deg);
+    left: 91px;
+    bottom: 3px;
 }
 
+.arrow_left {
+   right: 89px;
+    bottom: 2px;
+}
 .services {
 	height: 494px;
 	background-color: #f2f2f2;
