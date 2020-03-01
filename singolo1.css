@@ -118,35 +118,65 @@ color: #f06c64;
 	font-weight: 900;
 }
 
-.services_tools {
-	display: inline-flex;
+.layout-3-column {
+	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	padding-top: 10px;
 }
 
-.tools_column1,
-.tools_column2,
-.tools_column3 {
-	width: 305px;
-	justify-content: space-between;
-	margin-right: 7px;
+.tool {
+	width: 300px;	
+	letter-spacing: 0.05px;
 }
 
-.services_tools img {
-	float:left;
-	margin-right: 15px;
-	margin-bottom: 20px;
-
-}
-
-.services_tools h3 {
+.icon_name {
 	font-size: 1.8rem;
 	line-height: 18px;
 	font-weight: 900;
+	margin: 0;
+	margin-top: 17px;
 }
 
-.services_tools p {
+.icon_text {
 	font-size: 12px;
 	line-height: 22px;
 	font-weight: 400;
+	margin-bottom: 11px;
+	margin-top: 11px;
+	hyphens: auto;
 }
+
+.tool_icon {
+	display: inline-block;
+	cursor: pointer;
+	width: 61px;
+    height: 61px;
+	float: left;
+	margin: 18px 18px 30px 0;
+}
+
+.icon-pen {
+	background-image: url(./assets/images/Services.svg);
+}
+
+.icon-phone {
+	background-image: url(./assets/images/Phone.svg);
+}
+
+.icon-bulb {
+	background-image: url(./assets/images/Bulb.svg);
+}
+
+.icon-bubble {
+	background-image: url(./assets/images/Bubble.svg);
+}
+
+.icon-heart{
+	background-image: url(./assets/images/Heart.svg);
+}
+
+.icon-star {
+	background-image: url(assets/images/Star.svg);
+}
+
