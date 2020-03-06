@@ -23,11 +23,12 @@ body {
 	font-size: 25px;
 	line-height: 6px;	
 	letter-spacing: -0.5px;
+	text-transform: uppercase;
 }
 
-.logo_symbol,
-.navigation :first-child {
-color: #f06c64;
+.logo::after {
+	content: "*";
+	color: #f06c64;
 }
 
 .header .wrapper {
@@ -40,11 +41,29 @@ color: #f06c64;
 .navigation {
 	display: flex;
 	list-style: none;
+	text-transform: uppercase;
+	letter-spacing: 0.015rem;
 }
 
-.navigation_link {
-	padding-left:28px;
+.navigation_item {
+	padding-left:25px;
 	cursor: pointer;
+}
+
+.navigation_link:hover {
+	color: #f06c64;
+}
+
+.navigation:first-child {
+	color: #f06c64;
+}
+
+.navigation_item:not(:last-child)::after {
+	position: relative;
+	content: ".";
+	bottom: 3px;
+	color: #494e62;
+	left: 13px;
 }
 
 .slider {
@@ -179,4 +198,5 @@ color: #f06c64;
 .icon-star {
 	background-image: url(assets/images/Star.svg);
 }
+
 
