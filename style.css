@@ -49,12 +49,18 @@ body {
 	cursor: pointer;
 }
 
+.navigation_link {
+    text-decoration: none;
+    color: white;
+}
+
 .navigation_link:hover {
 	color: #f06c64;
 }
 
-.navigation_item:first-child {
-	color: #f06c64;
+
+.active {
+   color: #f06c64; 
 }
 
 .navigation_item:not(:last-child)::after {
@@ -65,30 +71,48 @@ body {
 	left: 13px;
 }
 
-.slider {
-	background-color: #f06c64;
-	height: 594px;
-	border-bottom: 6px solid #ea676b;
-	display: flex;
+.slider-box {
+    position: relative;
+    height: 594px;
+    max-width: 100%;
+    border-bottom: 6px solid #ea676b;
+    overflow: hidden;
 }
 
-.slider_wrapper {
-	display: inline-flex;
-	align-items: center;
-	margin: auto;
-	justify-content: space-between;
+.slider {
+    display: flex;
+    height: 594px;
+    width: 200%;
+    position: relative;
+    margin: auto;
+    left: 0;
+	/* justify-content: space-between;  */
+}
+
+.phone_slide1, .phone_slide2 {
+    float: left;
+}
+
+.phone_slide1 {
+    background-color: #f06c64;
+    position: relative;
+    width: 50%;
+}
+
+.phone_slide2 {
+    height: 100%;
 }
 
 .phone_vertical {
 	position: relative;
-    right: 35px;
-    bottom: 2px;
+    left: 35px;
+    top: 2px;
 }
 
 .phone_horizontal {
 	position: relative;
-	left: 35px;
-    bottom: 1px;
+	left: 33px;
+    bottom: 124px;
 }
 
 .slider_arrow {
@@ -97,18 +121,18 @@ body {
   	background: url("./assets/images/back.svg") no-repeat;
  	border: none;
 	cursor: pointer;
-	position: relative;
-}
-
-.arrow_right {
-	transform: rotate(180deg);
-    left: 91px;
-    bottom: 3px;
+	position: absolute;
 }
 
 .arrow_left {
-   right: 89px;
-    bottom: 2px;
+    left: 10px;
+    bottom: 50%;
+}
+
+.arrow_right {
+    transform: rotate(180deg);
+    right: 10px;
+    bottom: 50%;
 }
 
 /*********Our Services**********/
