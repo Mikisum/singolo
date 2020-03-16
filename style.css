@@ -86,7 +86,6 @@ body {
     position: relative;
     margin: auto;
     left: 0;
-	/* justify-content: space-between;  */
 }
 
 .phone_slide1, .phone_slide2 {
@@ -95,24 +94,16 @@ body {
 
 .phone_slide1 {
     background-color: #f06c64;
-    position: relative;
-    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* position: relative;*/
+    width: 50%; 
+    padding: 0px 75px;
 }
 
 .phone_slide2 {
     height: 100%;
-}
-
-.phone_vertical {
-	position: relative;
-    left: 35px;
-    top: 2px;
-}
-
-.phone_horizontal {
-	position: relative;
-	left: 33px;
-    bottom: 124px;
 }
 
 .slider_arrow {
@@ -125,15 +116,58 @@ body {
 }
 
 .arrow_left {
-    left: 10px;
-    bottom: 50%;
+    left: 41px;
+    bottom: 48%;
 }
 
 .arrow_right {
     transform: rotate(180deg);
-    right: 10px;
-    bottom: 50%;
+    right: 41px;
+    bottom: 48%;
 }
+
+.phone {
+    position: relative;
+}
+
+.phone_display {
+    visibility: hidden;
+    position: absolute;
+}
+
+.phone_button{
+    position: absolute;
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+}
+
+.phone_button:active {
+    box-shadow: inset 0 0 20px rgb(236, 111, 111);
+    border-radius: 50%;
+}
+
+.phone_vertical .phone_button {
+    left: 87px;
+    bottom: 38px;
+}
+
+.phone_horizontal .phone_button {
+    bottom: 291px;
+    left: 436px;
+}
+
+.phone_vertical .phone_display {
+    left: 15px;
+    bottom: 89px;
+}
+
+.phone_horizontal .phone_display {
+    transform: rotate(90deg);
+    left: 559px;
+    bottom: 145px;
+}
+
 
 /*********Our Services**********/
 
@@ -255,7 +289,7 @@ body {
 }
 
 .portfolio_header {
-    margin: 21px 0px;
+    margin: 21px 0px 20px 0;
 }
 
 .portfolio_logo {
@@ -280,32 +314,30 @@ body {
     letter-spacing: -0.02rem;
 }
 
-.portfolio_filter {
-    display: inline-block;
+.portfolio_tag {
+    display: flex;
+    justify-content: flex-start;
 }
 
-.portfolio_filter :first-child {
-    border-color: rgb(197, 197, 197);
-    color: #dedede;
-}
-
-.filter_item{
-    height: 22px;
+.tag{
+    height: 20px;
     border-radius: 5px;
     background-color: #2d303a;
     border: 1px solid #666d89;
-    margin-right: 6px;
+    margin-right: 7px;
     font-size: 1.2rem;
     color: #767e9e;
     line-height: 19px;
     letter-spacing: 0.009rem;
     font-family: "Lato";
     cursor: pointer;
+    padding: 0 7px;
 }
 
-.filter_item-selected, .filter_item:hover {
+.tag-selected, .tag:hover {
     border-color: #dedede;
     color: #dedede;
+    outline: none;
 }
 
 .gallery {
@@ -317,9 +349,19 @@ body {
     box-sizing: border-box;
 }
 
-.gallery_item {
-    margin-bottom: 15px;
+.gallery {
+    cursor: pointer;
 }
+
+.gallery img {
+    margin-bottom: 19px;
+}
+
+.item_active, .gallery_item:hover {
+    outline: 5px solid #F06C64;
+    outline-offset: -5px;
+}
+
 
 /****************About-us****************/
 
@@ -599,6 +641,7 @@ body {
 .icon-linkedIn {
     background-image: url(./assets/images/icons/linkedin.svg);
 }
+
 
 
 

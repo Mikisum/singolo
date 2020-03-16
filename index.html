@@ -27,8 +27,16 @@
 	<div class="slider-box">
 		<div class="slider">
             <div class="phone_slide1">
-                <img class="phone_vertical" src="./assets/images/iPhone Vertical.png" alt="phone">
-                <img class="phone_horizontal" src="./assets/images/iPhone Horizontal.png" alt="phone">
+                <div class="phone phone_vertical">
+                    <img src="./assets/images/iPhone Vertical.png" alt="phone">
+                    <img class="phone_display" id="display_vertical" src="./assets/images/display-black.png" alt="display">
+                    <div class="phone_button" id="button_vertical"></div>
+                </div>
+                <div class="phone_horizontal">
+                    <img src="./assets/images/iPhone Horizontal.png" alt="phone">
+                    <img class="phone_display" id="display_horizontal" src="./assets/images/display-black.png" alt="display">
+                    <div class="phone_button" id="button_horizontal"></div>
+                </div>
             </div>
             <div class="phone_slide2">
                 <img src="./assets/images/Slider.png" alt="phone">
@@ -89,26 +97,26 @@
             <div class="portfolio_header">
                 <h2 class="portfolio_logo"><a class="logo-link" href="#">Portfolio</a></h2>
                 <p class="portfolio_text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                <div class="portfolio_filter">
-                    <button class="filter_item filter_item-selected">All</button>
-                    <button class="filter_item">Web Design</button>
-                    <button class="filter_item">Graphic Design</button>
-                    <button class="filter_item">Artwork</button>
+                <div class="portfolio_tag" id="filter">
+                    <span id="all" class="tag tag-selected">All</span>
+                    <span id="web" class="tag">Web Design</span>
+                    <span id="graphic" class="tag">Graphic Design</span>
+                    <span id="artwork" class="tag">Artwork</span>
                 </div>
             </div>
-            <div class="gallery">
-                <div class="gallery_item"><img src="assets/images/gallery/row1/1.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row1/2.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row1/3.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row1/4.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row2/1.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row2/2.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row2/3.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row2/4.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row3/1.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row3/2.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row3/3.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row3/4.jpg" alt="gallery-image"></img></div>
+            <div class="gallery" id="gallery">
+                <img src="assets/images/gallery/row1/1.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row1/2.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row1/3.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row1/4.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row2/1.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row2/2.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row2/3.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row2/4.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row3/1.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row3/2.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row3/3.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row3/4.jpg" alt="gallery-image"></img>
             </div>
         </div>   
     </section>
@@ -178,12 +186,12 @@
             <p class="information_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-2-column">
                 <div class="information-form">
-                    <form action="#" target="get" class="form_input">
-                        <input type="text" name="name" class="information-form_input" placeholder="Name (Required)" required>
-                        <input type="email" name="email" class="information-form_input" placeholder="Email (Required)" required>
-                        <input type="text" name="subject" class="information-form_input" placeholder="Subject">
-                        <textarea name="message" class="information-form_input input-textarea" placeholder="Describe your project in detail..."></textarea>
-                        <input class="information-form_input input-submit" type="submit" value="Send"></input>
+                    <form action="#" target="get" class="form_input" id="form">
+                        <input type="text" id="name" name="name" class="information-form_input" placeholder="Name (Required)" required>
+                        <input type="email" id="email" name="email" class="information-form_input" placeholder="Email (Required)" required>
+                        <input type="text" id="subject" name="subject" class="information-form_input" placeholder="Subject">
+                        <textarea id="description" name="description" class="information-form_input input-textarea" placeholder="Describe your project in detail..."></textarea>
+                        <input id="submit" class="information-form_input input-submit" type="submit" value="send"></input>
                     </form>
                     
                 </div>
