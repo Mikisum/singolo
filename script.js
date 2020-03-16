@@ -123,6 +123,16 @@ GALLERY.addEventListener('click', (event) => {
 
 // Get a quote
 
+let modalForm = document.getElementById('form');
+let modal = document.getElementById('modal');
+let modalSubject = document.getElementById('modal-subject');
+let modalDescription = document.getElementById('modal-description');
+let modalButton = document.getElementById('modal_button'); 
+
+modalSubject.innerHTML = '';
+modalDescription.innerHTML = '';
+
+
 document.getElementById('submit').addEventListener('click', (event) => {
     if (document.getElementById('name').checkValidity()) {
         if (document.getElementById('email').checkValidity()) {
@@ -131,11 +141,16 @@ document.getElementById('submit').addEventListener('click', (event) => {
             subject = subject === '' ? 'Without subject' : 'Subject: ' + subject;
             let description = document.getElementById('description').value;
             description = description === '' ? 'Without description' : 'Description: ' + description;
-            let message = 'The letter was sent \n'+subject+'\n'+description;
-            alert(message);
-
+            
+            modalSubject.innerHTML = subject;
+            modalDescription.innerHTML = description;
+            modal.style.display = 'block';
         }
     }
+});
+
+modalButton.addEventListener('click', () => {
+    modal.style.display = 'none';
 });
 
 
