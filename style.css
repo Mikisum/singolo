@@ -1,12 +1,13 @@
 html {
-	font-size: 10px;
+    font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
 	width: 1020px;
 	margin: auto;
 	font-size: 1.2rem;
-	font-family: 'Lato', Verdana, sans-serif;
+    font-family: 'Lato', Verdana, sans-serif;
 }
 
 .ancor-link {
@@ -83,12 +84,13 @@ body {
     position: relative;
     height: 594px;
     max-width: 100%;
-    border-bottom: 6px solid #ea676b;
+    
     overflow: hidden;
 }
 
 .slider {
     display: flex;
+    flex-direction: row;
     height: 594px;
     width: 200%;
     position: relative;
@@ -105,13 +107,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* position: relative;*/
     width: 50%; 
     padding: 0px 75px;
+    border-bottom: 6px solid #ea676b;
 }
 
 .phone_slide2 {
     height: 100%;
+    border-bottom: 6px solid black;
 }
 
 .slider_arrow {
@@ -182,7 +185,7 @@ body {
 .services {
 	height: 494px;
 	background-color: #f2f2f2;
-	border-bottom: 6px solid #fff;
+    border-bottom: 6px solid #fff;
 }
 
 .services_wrapper {
@@ -462,7 +465,7 @@ body {
     background-image: url(./assets/images/icons/linkedin.svg);
 }
 
-/**********Get a Quote**********/
+/********** Get a Quote **********/
 
 .information { 
     background-color: #f06c64;
@@ -523,14 +526,14 @@ body {
     border: none;
     width: -webkit-fill-available;
     margin-bottom: 14px;   
+    padding-left: 15px;
 }
 
 .input-textarea {
     height: 195px;
     resize: none;
     line-height: 22px;
-    padding: 0px;
-    padding-top: 8px;
+    padding: 8px 0 0 15px;
 }
 
 .input-submit {
@@ -543,7 +546,7 @@ body {
     font-family: "Lato";
     color: #f48c8f;
     line-height: 22px;
-    padding-left: 14px;
+    /* padding-left: 14px; */
 }
 
 .information-form_input:focus {

@@ -23,10 +23,21 @@ function onScroll(event) {
 const ARROW_LEFT = document.getElementById('left');
 const ARROW_RIGHT = document.getElementById('right');
 const SLIDER = document.getElementsByClassName('slider');
-
+SLIDER[0].style.flexDirection = 'row';
 let counter = 0;
 
 ARROW_LEFT.addEventListener('click', (event) => {
+    if (counter === -1020) {
+        counter = 0;
+
+        if (SLIDER[0].style.flexDirection === 'row') {
+            SLIDER[0].style.flexDirection = 'row-reverse';
+        }else SLIDER[0].style.flexDirection = 'row';
+
+        document.querySelectorAll('.slider').forEach((phone_slide) => {
+            phone_slide.style.left = `${counter}px`;
+        });
+    }
 
     if (counter === 0) {
         let interval = setInterval(function() {
@@ -36,18 +47,6 @@ ARROW_LEFT.addEventListener('click', (event) => {
                     return;
                 }
                 counter -= 10;
-                phone_slide.style.left = `${counter}px`; 
-            });
-        }, 1);
-    }
-    if (counter === -1020) {
-        let interval = setInterval(function() {
-            document.querySelectorAll('.slider').forEach((phone_slide) => {
-                if (phone_slide.style.left === '0px') {
-                    clearInterval(interval);
-                    return;
-                }
-                counter += 10;
                 phone_slide.style.left = `${counter}px`; 
             });
         }, 1);
@@ -56,6 +55,17 @@ ARROW_LEFT.addEventListener('click', (event) => {
 
 ARROW_RIGHT.addEventListener('click', (event) => {
 
+    if (counter === 0) {
+        counter = -1020;
+        if (SLIDER[0].style.flexDirection === 'row') {
+            SLIDER[0].style.flexDirection = 'row-reverse';
+        }else SLIDER[0].style.flexDirection = 'row';
+
+        document.querySelectorAll('.slider').forEach((phone_slide) => {
+            phone_slide.style.left = `${counter}px`;
+        });
+    }
+
     if (counter === -1020) {
         let interval = setInterval(function() {
             document.querySelectorAll('.slider').forEach((phone_slide) => {
@@ -64,18 +74,6 @@ ARROW_RIGHT.addEventListener('click', (event) => {
                     return;
                 }
                 counter += 10;
-                phone_slide.style.left = `${counter}px`; 
-            });
-        }, 1);
-    }
-    if (counter === 0) {
-        let interval = setInterval(function() {
-            document.querySelectorAll('.slider').forEach((phone_slide) => {
-                if (phone_slide.style.left === '-1020px') {
-                    clearInterval(interval);
-                    return;
-                }
-                counter -= 10;
                 phone_slide.style.left = `${counter}px`; 
             });
         }, 1);
