@@ -13,28 +13,45 @@
 			<h1 class="logo">singolo</h1>
 			<span class="logo_symbol"></span>
 			<nav>
-				<ul class="navigation">
-					<li class="navigation_item"><a class="navigation_link">home</a></li>
-					<li class="navigation_item"><a class="navigation_link">services</a></li>
-					<li class="navigation_item"><a class="navigation_link">portfolio</a></li>
-					<li class="navigation_item"><a class="navigation_link">about</a></li>
-					<li class="navigation_item"><a class="navigation_link">contact</a></li>
+				<ul class="navigation" id="navigation">
+					<li class="navigation_item"><a href="#home" class="navigation_link active">home</a></li>
+					<li class="navigation_item"><a href="#services" class="navigation_link">services</a></li>
+					<li class="navigation_item"><a href="#portfolio" class="navigation_link">portfolio</a></li>
+					<li class="navigation_item"><a href="#about" class="navigation_link">about</a></li>
+					<li class="navigation_item"><a href="#contact" class="navigation_link">contact</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 	
-	<div class="slider">
-		<div class="slider_wrapper">
-			<button class=" slider_arrow arrow_left"></button>
-			<div class="phone"><img class="phone_vertical" src="./assets/images/iPhone Vertical.png" alt="phone"></div>
-			<div class="phone"><img class="phone_horizontal" src="./assets/images/iPhone Horizontal.png" alt="phone"></div>
-			<button class="slider_arrow arrow_right"></button>
-		</div>
-	</div>
+	<section class="slider-box">
+        <div class="slider_wrapper" id = "home">
+		<div class="slider">
+            <div class="phone_slide1">
+                <div class="phone phone_vertical">
+                    <img src="./assets/images/iPhone Vertical.png" alt="phone">
+                    <img class="phone_display" id="display_vertical" src="./assets/images/display-black.png" alt="display">
+                    <div class="phone_button" id="button_vertical"></div>
+                </div>
+                <div class="phone_horizontal">
+                    <img src="./assets/images/iPhone Horizontal.png" alt="phone">
+                    <img class="phone_display" id="display_horizontal" src="./assets/images/display-black.png" alt="display">
+                    <div class="phone_button" id="button_horizontal"></div>
+                </div>
+            </div>
+            <div class="phone_slide2">
+                <img src="./assets/images/Slider.png" alt="phone">
+            </div>
+        </div>
+        <div>
+            <div class="slider_arrow arrow_right" id="right"></div>
+            <div class=" slider_arrow arrow_left" id="left"></div>
+        </div>
+    </div>
+	</section>
 
 	<section class="services">
-		<div class="services_wrapper">
+		<div class="services_wrapper" id ="services">
 			<div class="services_content">
 				<h2 class="services_header">Our Services</h2>
 				<p class="services_text">Fusce dapibus, tellus ac cursus commodo,tortor mauris condimentum. Duis mollis,non commodo luctus,nisi erat porttitor ligula,eget lacinia odio sem nec elit.Fusce dapibus,tellus ac cursus commodo, tortor maris condimetum nibh.</p>
@@ -80,36 +97,36 @@
 		</div>
     </section>
     <section class="portfolio">
-        <div class="wrapper portfolio_wrapper">
+        <div class="wrapper portfolio_wrapper" id="portfolio">
             <div class="portfolio_header">
                 <h2 class="portfolio_logo"><a class="logo-link" href="#">Portfolio</a></h2>
                 <p class="portfolio_text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                <div class="portfolio_filter">
-                    <button class="filter_item filter_item-selected">All</button>
-                    <button class="filter_item">Web Design</button>
-                    <button class="filter_item">Graphic Design</button>
-                    <button class="filter_item">Artwork</button>
+                <div class="portfolio_tag" id="filter">
+                    <span id="all" class="tag tag-selected">All</span>
+                    <span id="web" class="tag">Web Design</span>
+                    <span id="graphic" class="tag">Graphic Design</span>
+                    <span id="artwork" class="tag">Artwork</span>
                 </div>
             </div>
-            <div class="gallery">
-                <div class="gallery_item"><img src="assets/images/gallery/row1/1.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row1/2.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row1/3.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row1/4.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row2/1.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row2/2.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row2/3.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row2/4.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row3/1.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row3/2.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row3/3.jpg" alt="gallery-image"></img></div>
-                <div class="gallery_item"><img src="assets/images/gallery/row3/4.jpg" alt="gallery-image"></img></div>
+            <div class="gallery" id="gallery">
+                <img src="assets/images/gallery/row1/1.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row1/2.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row1/3.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row1/4.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row2/1.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row2/2.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row2/3.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row2/4.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row3/1.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row3/2.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row3/3.jpg" alt="gallery-image"></img>
+                <img src="assets/images/gallery/row3/4.jpg" alt="gallery-image"></img>
             </div>
         </div>   
     </section>
 
     <section class="about-us">
-        <div class="wrapper about-us_wrapper">
+        <div class="wrapper about-us_wrapper" id="about">
             <h2 class="about-us_header">About Us</h2>
             <p class="about-us_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, 
                 nisi erat porttitor ligula, edet lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, 
@@ -167,18 +184,18 @@
         </div>
     </section>
 
-    <section class="information">
-        <div class="information_wrapper">
+    <section class="information" >
+        <div class="information_wrapper" id="contact">
             <h2 class="information_header">Get a Quote</h2>
             <p class="information_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-2-column">
                 <div class="information-form">
-                    <form action="#" target="get" class="form_input">
-                        <input type="text" name="name" class="information-form_input" placeholder="Name (Required)" required>
-                        <input type="email" name="email" class="information-form_input" placeholder="Email (Required)" required>
-                        <input type="text" name="subject" class="information-form_input" placeholder="Subject">
-                        <textarea name="message" class="information-form_input input-textarea" placeholder="Describe your project in detail..."></textarea>
-                        <input class="information-form_input input-submit" type="submit" value="Send"></input>
+                    <form action="#" target="get" class="form_input" id="form">
+                        <input type="text" id="name" name="name" class="information-form_input" placeholder="Name (Required)" required>
+                        <input type="email" id="email" name="email" class="information-form_input" placeholder="Email (Required)" required>
+                        <input type="text" id="subject" name="subject" class="information-form_input" placeholder="Subject">
+                        <textarea id="description" name="description" class="information-form_input input-textarea" placeholder="Describe your project in detail..."></textarea>
+                        <input id="submit" class="information-form_input input-submit" type="submit" value="send"></input>
                     </form>
                     
                 </div>
@@ -204,5 +221,14 @@
             </div>
         </div>
     </footer>
+    <div class="modal" id="modal">
+        <div class="modal_message" id="message">
+            <h2 class="modal-title">The letter was sent </h2>
+            <p class="modal-text" id="modal-subject"></p>
+            <p class="modal-text" id="modal-description"></p>
+            <button class="modal_button" id="modal_button">OK</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
