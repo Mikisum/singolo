@@ -1,9 +1,22 @@
-const NAVIGATION = document.getElementById('navigation');
+document.addEventListener('scroll', onScroll);
 
-NAVIGATION.addEventListener('click', (event) => {
-    NAVIGATION.querySelectorAll('a').forEach(el => el.classList.remove('active'));
-    event.target.classList.add('active');
-});
+function onScroll(event) {
+    const curPos = window.scrollY;
+    const links = document.querySelectorAll('.navigation a');
+    
+    document.querySelectorAll('section>div').forEach( el => {
+
+        if (el.offsetTop -89<= curPos && (el.offsetTop + el.offsetHeight - 89) > curPos) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active'); 
+                }
+            })
+        }
+
+    }); 
+}
 
 // Slider. Переключение слайдов
 

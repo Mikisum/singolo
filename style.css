@@ -14,7 +14,10 @@ body {
 	border-bottom: 6px solid #323746;
 	font-weight: 700;
 	height: 89px;
-	color: white;
+    color: white;
+    position: fixed;
+    z-index: 1;
+    width: 1020px;
 }
 
 .logo {
@@ -77,6 +80,7 @@ body {
     max-width: 100%;
     border-bottom: 6px solid #ea676b;
     overflow: hidden;
+    padding-top: 89px;
 }
 
 .slider {
