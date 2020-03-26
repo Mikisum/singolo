@@ -760,6 +760,7 @@ body {
 .hamburger_line {
     display: none;
 }
+
 @media (max-width: 1019px) {
     .wrapper {
         text-align: unset; 
@@ -779,6 +780,7 @@ body {
     .phone_horizontal {
         width: 344.26px;
         height: 162.26px;
+        left: 0;
     }
 
     .phone_slide2 {
