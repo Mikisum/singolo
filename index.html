@@ -4,16 +4,21 @@
 	<meta charset="utf-8">
 	<title>singolo</title>
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	
 	<header class="header">
-		<div class="wrapper">
+		<div class="wrapper header_wrapper">
 			<h1 class="logo">singolo</h1>
 			<span class="logo_symbol"></span>
-			<nav>
-				<ul class="navigation" id="navigation">
+			<nav class="navigation active">
+                <span class="hamburger hamburger-active">
+                    <span class="hamburger_line"></span>
+                </span>
+				<ul class="navigation navigation-active" id="navigation">
 					<li class="navigation_item"><a href="#home" class="navigation_link active">home</a></li>
 					<li class="navigation_item"><a href="#services" class="navigation_link">services</a></li>
 					<li class="navigation_item"><a href="#portfolio" class="navigation_link">portfolio</a></li>
@@ -34,7 +39,7 @@
                     <img class="phone_display" id="display_vertical" src="./assets/images/display-black.png" alt="display">
                     <div class="phone_button" id="button_vertical"></div>
                 </div>
-                <div class="phone_horizontal">
+                <div class="phone phone_horizontal">
                     <img src="./assets/images/iPhone Horizontal.png" alt="phone">
                     <img class="phone_display" id="display_horizontal" src="./assets/images/display-black.png" alt="display">
                     <div class="phone_button" id="button_horizontal"></div>
@@ -53,7 +58,7 @@
 
 	<section class="services">
         <a name="services" class="ancor-link"></a>
-		<div class="services_wrapper">
+		<div class="wrapper services_wrapper">
 			<div class="services_content">
 				<h2 class="services_header">Our Services</h2>
 				<p class="services_text">Fusce dapibus, tellus ac cursus commodo,tortor mauris condimentum. Duis mollis,non commodo luctus,nisi erat porttitor ligula,eget lacinia odio sem nec elit.Fusce dapibus,tellus ac cursus commodo, tortor maris condimetum nibh.</p>
@@ -111,19 +116,21 @@
                     <span id="artwork" class="tag">Artwork</span>
                 </div>
             </div>
-            <div class="gallery" id="gallery">
-                <img src="assets/images/gallery/row1/1.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row1/2.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row1/3.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row1/4.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row2/1.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row2/2.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row2/3.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row2/4.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row3/1.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row3/2.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row3/3.jpg" alt="gallery-image"></img>
-                <img src="assets/images/gallery/row3/4.jpg" alt="gallery-image"></img>
+            <div id="gallery">
+                <ul class="gallery">
+                    <li><img src="assets/images/gallery/row1/1.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row1/2.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row1/3.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row1/4.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row2/1.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row2/2.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row2/3.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row2/4.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row3/1.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row3/2.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row3/3.jpg" alt="gallery-image"></img></li>
+                    <li><img src="assets/images/gallery/row3/4.jpg" alt="gallery-image"></img></li>
+                </ul>
             </div>
         </div>   
     </section>
@@ -190,9 +197,12 @@
 
     <section class="information" >
         <a name="contact" class="ancor-link"></a>
-        <div class="information_wrapper">
-            <h2 class="information_header">Get a Quote</h2>
-            <p class="information_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        <div class="wrapper information_wrapper">
+            <div class="information-content">
+               <h2 class="information_header">Get a Quote</h2>
+                <p class="information_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p> 
+            </div>
+            
             <div class="layout-2-column">
                 <div class="information-form">
                     <form action="#" target="get" class="form_input" id="form">
@@ -216,7 +226,7 @@
     </section>
 
     <footer class="footer">
-        <div class="footer_wrapper">
+        <div class="wrapper footer_wrapper">
             <span class="footer_copyright">© Copyright 2013</span>
             <div class="social footer_social">
                 <span class="social_icon icon-facebook"></span>

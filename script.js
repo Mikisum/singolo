@@ -27,7 +27,7 @@ SLIDER[0].style.flexDirection = 'row';
 let counter = 0;
 
 ARROW_LEFT.addEventListener('click', (event) => {
-    if (counter === -1020) {
+    if (counter === -document.body.clientWidth) {
         counter = 0;
 
         if (SLIDER[0].style.flexDirection === 'row') {
@@ -42,11 +42,11 @@ ARROW_LEFT.addEventListener('click', (event) => {
     if (counter === 0) {
         let interval = setInterval(function() {
             document.querySelectorAll('.slider').forEach((phone_slide) => {
-                if (phone_slide.style.left === '-1020px') {
+                if (phone_slide.style.left === `-${document.body.clientWidth}px`) {
                     clearInterval(interval);
                     return;
                 }
-                counter -= 10;
+                counter -= 1;
                 phone_slide.style.left = `${counter}px`; 
             });
         }, 1);
@@ -56,7 +56,7 @@ ARROW_LEFT.addEventListener('click', (event) => {
 ARROW_RIGHT.addEventListener('click', (event) => {
 
     if (counter === 0) {
-        counter = -1020;
+        counter = -document.body.clientWidth;
         if (SLIDER[0].style.flexDirection === 'row') {
             SLIDER[0].style.flexDirection = 'row-reverse';
         }else SLIDER[0].style.flexDirection = 'row';
@@ -66,14 +66,14 @@ ARROW_RIGHT.addEventListener('click', (event) => {
         });
     }
 
-    if (counter === -1020) {
+    if (counter === -document.body.clientWidth) {
         let interval = setInterval(function() {
             document.querySelectorAll('.slider').forEach((phone_slide) => {
                 if (phone_slide.style.left === '0px') {
                     clearInterval(interval);
                     return;
                 }
-                counter += 10;
+                counter += 1;
                 phone_slide.style.left = `${counter}px`; 
             });
         }, 1);
@@ -113,7 +113,7 @@ const FILTER = document.getElementById('filter');
 FILTER.addEventListener('click', (event) => {
     FILTER.querySelectorAll('.tag').forEach(el => el.classList.remove('tag-selected'));
     event.target.classList.add('tag-selected');
-    GALLERY.querySelectorAll('img').forEach(img => img.style.order = Math.floor(Math.random() - 0.5));
+    GALLERY.querySelectorAll('li').forEach(img => img.style.order = Math.floor(Math.random() - 0.5));
     
     // let elements = GALLERY.childNodes;
     // for (let i = 0; i < elements.length; i++) {
