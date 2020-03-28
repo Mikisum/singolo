@@ -12,49 +12,56 @@
 	
 	<header class="header">
 		<div class="wrapper header_wrapper">
+            <span id="hamburger_button" class="hamburger" >
+                <span class="hamburger_line"></span>
+            </span>
+            <ul class="navigation navigation-mobile" id="navigation">
+                <li class="navigation_item"><a href="#home" class="navigation_link active">home</a></li>
+                <li class="navigation_item"><a href="#services" class="navigation_link">services</a></li>
+                <li class="navigation_item"><a href="#portfolio" class="navigation_link">portfolio</a></li>
+                <li class="navigation_item"><a href="#about" class="navigation_link">about</a></li>
+                <li class="navigation_item"><a href="#contact" class="navigation_link">contact</a></li>
+            </ul>
 			<h1 class="logo">singolo</h1>
-			<span class="logo_symbol"></span>
-			<nav class="navigation active">
-                <span class="hamburger hamburger-active">
-                    <span class="hamburger_line"></span>
-                </span>
-				<ul class="navigation navigation-active" id="navigation">
+            <span class="logo_symbol"></span>
+            <a name="home" class="ancor-link"></a>
+			<nav class="navigation">
+				<ul class="navigation_items " id="navigation">
 					<li class="navigation_item"><a href="#home" class="navigation_link active">home</a></li>
 					<li class="navigation_item"><a href="#services" class="navigation_link">services</a></li>
 					<li class="navigation_item"><a href="#portfolio" class="navigation_link">portfolio</a></li>
 					<li class="navigation_item"><a href="#about" class="navigation_link">about</a></li>
 					<li class="navigation_item"><a href="#contact" class="navigation_link">contact</a></li>
 				</ul>
-			</nav>
+            </nav>
 		</div>
 	</header>
-	
-	<section class="slider-box">
-        <a name="home" class="ancor-link"></a>
-        <div class="slider_wrapper">
-		<div class="slider">
+    
+    <section class="slider">
+        <div class="items-container"> 
+          <div class="item item-active">
             <div class="phone_slide1">
                 <div class="phone phone_vertical">
-                    <img src="./assets/images/iPhone Vertical.png" alt="phone">
+                    <img class="phone_image" src="./assets/images/iPhone Vertical.png" alt="phone">
                     <img class="phone_display" id="display_vertical" src="./assets/images/display-black.png" alt="display">
                     <div class="phone_button" id="button_vertical"></div>
                 </div>
                 <div class="phone phone_horizontal">
-                    <img src="./assets/images/iPhone Horizontal.png" alt="phone">
+                    <img class="phone_image" src="./assets/images/iPhone Horizontal.png" alt="phone">
                     <img class="phone_display" id="display_horizontal" src="./assets/images/display-black.png" alt="display">
                     <div class="phone_button" id="button_horizontal"></div>
                 </div>
             </div>
+          </div>
+          <div class="item">
             <div class="phone_slide2">
                 <img src="./assets/images/Slider.png" alt="phone">
             </div>
+          </div>
         </div>
-        <div>
-            <div class="slider_arrow arrow_right" id="right"></div>
-            <div class=" slider_arrow arrow_left" id="left"></div>
-        </div>
-    </div>
-	</section>
+        <div class="arrow arrow-left"></div>
+        <div class="arrow arrow-right"></div>
+    </section>
 
 	<section class="services">
         <a name="services" class="ancor-link"></a>

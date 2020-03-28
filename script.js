@@ -17,67 +17,60 @@ function onScroll(event) {
 
     }); 
 }
+//  Humburger menu
 
-// Slider. Переключение слайдов
-
-const ARROW_LEFT = document.getElementById('left');
-const ARROW_RIGHT = document.getElementById('right');
-const SLIDER = document.getElementsByClassName('slider');
-SLIDER[0].style.flexDirection = 'row';
-let counter = 0;
-
-ARROW_LEFT.addEventListener('click', (event) => {
-    if (counter === -document.body.clientWidth) {
-        counter = 0;
-
-        if (SLIDER[0].style.flexDirection === 'row') {
-            SLIDER[0].style.flexDirection = 'row-reverse';
-        }else SLIDER[0].style.flexDirection = 'row';
-
-        document.querySelectorAll('.slider').forEach((phone_slide) => {
-            phone_slide.style.left = `${counter}px`;
-        });
-    }
-
-    if (counter === 0) {
-        let interval = setInterval(function() {
-            document.querySelectorAll('.slider').forEach((phone_slide) => {
-                if (phone_slide.style.left === `-${document.body.clientWidth}px`) {
-                    clearInterval(interval);
-                    return;
-                }
-                counter -= 1;
-                phone_slide.style.left = `${counter}px`; 
-            });
-        }, 1);
-    }
+document.getElementById('hamburger_button').addEventListener('click', function() {
+    document.getElementById('hamburger_button').classList.toggle('hamburger-active');
+    document.querySelector('.navigation-mobile').classList.toggle('navigation-active');
 });
 
-ARROW_RIGHT.addEventListener('click', (event) => {
+let items = document.querySelectorAll('.slider .item');
+let currentItem = 0;
+let isEnabled = true;
 
-    if (counter === 0) {
-        counter = -document.body.clientWidth;
-        if (SLIDER[0].style.flexDirection === 'row') {
-            SLIDER[0].style.flexDirection = 'row-reverse';
-        }else SLIDER[0].style.flexDirection = 'row';
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
+}
 
-        document.querySelectorAll('.slider').forEach((phone_slide) => {
-            phone_slide.style.left = `${counter}px`;
-        });
-    }
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('item-active', direction);
+	});
+}
 
-    if (counter === -document.body.clientWidth) {
-        let interval = setInterval(function() {
-            document.querySelectorAll('.slider').forEach((phone_slide) => {
-                if (phone_slide.style.left === '0px') {
-                    clearInterval(interval);
-                    return;
-                }
-                counter += 1;
-                phone_slide.style.left = `${counter}px`; 
-            });
-        }, 1);
-    }
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('item-active');
+		isEnabled = true;
+	});
+}
+
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
+}
+
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
+}
+
+document.querySelector('.arrow-left').addEventListener('click', function() {
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
+});
+
+document.querySelector('.arrow-right').addEventListener('click', function() {
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
 });
 
 //  Slider. Активация экранов телефонов
@@ -85,24 +78,24 @@ ARROW_RIGHT.addEventListener('click', (event) => {
 const BUTTON_VERTICAL = document.getElementById('button_vertical');
 const BUTTON_HORIZONTAL = document.getElementById('button_horizontal');
 
-display_vertical.style.visibility = 'hidden';
-display_horizontal.style.visibility = 'hidden';
+display_vertical.style.display = 'none';
+display_horizontal.style.display = 'none';
 
 BUTTON_VERTICAL.addEventListener('click', (event) => {
-    if (display_vertical.style.visibility === 'hidden') {
-        display_vertical.style.visibility = 'visible';
+    if (display_vertical.style.display === 'none') {
+        display_vertical.style.display = 'block';
     }
     else {
-        display_vertical.style.visibility = 'hidden';
+        display_vertical.style.display = 'none';
     }
 });
 
 BUTTON_HORIZONTAL.addEventListener('click', (event) => {
-    if (display_horizontal.style.visibility === 'hidden') {
-        display_horizontal.style.visibility = 'visible';
+    if (display_horizontal.style.display === 'none') {
+        display_horizontal.style.display = 'block';
     }
     else {
-        display_horizontal.style.visibility = 'hidden';
+        display_horizontal.style.display = 'none';
     }
 });
 
@@ -115,13 +108,7 @@ FILTER.addEventListener('click', (event) => {
     event.target.classList.add('tag-selected');
     GALLERY.querySelectorAll('li').forEach(img => img.style.order = Math.floor(Math.random() - 0.5));
     
-    // let elements = GALLERY.childNodes;
-    // for (let i = 0; i < elements.length; i++) {
-    //     GALLERY.appendChild(elements[i]);
-    // }
 });
-
-
 
 // Portfolio. Взаимодействие с картинками
 
