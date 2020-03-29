@@ -149,6 +149,7 @@ document.getElementById('submit').addEventListener('click', (event) => {
 
 modalButton.addEventListener('click', () => {
     modal.style.display = 'none';
+    document.getElementById('form').reset();
 });
 
 

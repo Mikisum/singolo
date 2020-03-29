@@ -202,7 +202,7 @@ body {
  	border: none;
 	cursor: pointer;
     position: absolute;
-    top: 45%;
+    top: 47%;
 }
 
 .arrow-left {
@@ -769,6 +769,10 @@ body {
         word-spacing: unset;
     }
 
+    .phone_slide1 {
+        padding: 5.2% 11%;
+    }
+
     .phone_verical {
         width: 242px;
         height: 486px;
@@ -795,11 +799,11 @@ body {
     }
 
     .arrow-left {
-        left: 3%;
+        left: 3.5%;
     }
 
     .arrow-right {
-        right: 3%;
+        right: 3.5%;
     }
 
     .services {
@@ -816,7 +820,7 @@ body {
     }
     
     .tool:nth-child(2n) {
-        padding-right: 35px;
+        margin-right: 35px;
     }
 
     .services_content {
@@ -832,8 +836,8 @@ body {
     }
 
     .gallery li {
-        width: 32.1%;
-        margin-bottom: 12px;
+        width: 31.5%;
+        margin-bottom: 15px;
     }
 
     .about-us{
@@ -850,12 +854,12 @@ body {
     }
 
     .employee_name {
-        margin-top: 9px;
+        margin-top: 11px;
     }
 
     .employee_text {
         margin: 0;
-        margin-bottom: 11px;
+        margin-bottom: 12px;
     }
 
     .information {
@@ -878,7 +882,7 @@ body {
 
     .input-submit {
         padding: 0;
-        margin-top: 4px;
+        margin-top: 10px;
     }
     
 
@@ -967,7 +971,7 @@ body {
     }
 
    .logo {
-        padding-top: 24px;
+        padding-top: 25px;
         font-size: 19.6875px;
         line-height: 24px;
    }
@@ -977,8 +981,8 @@ body {
         display: inline-block;
         width: 27px;
         height: 27px;
-        right: 27%;
-        top: 5px;
+        right: 29%;
+        top: 13%;
     } 
     
     .hamburger-active {
@@ -1025,6 +1029,18 @@ body {
         top: 10px;
     }
 
+    .arrow {
+        top: 43%;
+    }
+
+    .arrow-left {
+        left: 2.5%;
+    }
+
+    .arrow-right {
+        right: 2.5%;
+    }
+
     .services {
         padding-top: 32px;
         padding-bottom: 0;
@@ -1043,7 +1059,8 @@ body {
     }
 
     .gallery li{
-       width:calc(50% - 10px); 
+       width:calc(50% - 7px); 
+       margin-bottom: 9px;
     }
 
     .gallery li:nth-child(1n + 9) {
