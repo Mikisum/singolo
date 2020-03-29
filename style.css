@@ -476,6 +476,8 @@ body {
     line-height: 18px;
     color: #666d89;
     font-weight: 900;
+    max-height: 20px;
+    overflow: hidden;
 }
 
 .employee_text {    
@@ -984,7 +986,9 @@ body {
         right: 29%;
         top: 13%;
     } 
-    
+    .hidden {
+        display: none;
+    }
     .hamburger-active {
         transform: rotate(90deg);
         transition: transform ease 0.6s;
@@ -1147,6 +1151,15 @@ body {
     }
   
 }
+
+@media (max-width: 374px) {
+    .portfolio_tag .tag  {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+}
+
+
 
 
   

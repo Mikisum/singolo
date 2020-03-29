@@ -17,12 +17,30 @@ function onScroll(event) {
 
     }); 
 }
-//  Humburger menu
 
-document.getElementById('hamburger_button').addEventListener('click', function() {
-    document.getElementById('hamburger_button').classList.toggle('hamburger-active');
-    document.querySelector('.navigation-mobile').classList.toggle('navigation-active');
+//  Humburger menu
+const hamburgerButton = document.getElementById('hamburger_button');
+const hamburgerMenu = document.querySelector('.navigation-mobile');
+
+hamburgerButton.addEventListener('click', function() {
+    hamburgerButton.classList.toggle('hamburger-active');
+    hamburgerMenu.classList.toggle('navigation-active');
+
 });
+
+const humbrgerLinks = document.querySelectorAll('.navigation-mobile a');
+
+hamburgerMenu.addEventListener('click', (event) => {
+    humbrgerLinks.forEach(a => {
+        a.classList.remove('active');
+        hamburgerMenu.classList.toggle('navigation-active');
+        hamburgerButton.classList.toggle('hamburger-active');
+    })
+});
+
+
+
+// Slider
 
 let items = document.querySelectorAll('.slider .item');
 let currentItem = 0;
@@ -151,6 +169,7 @@ modalButton.addEventListener('click', () => {
     modal.style.display = 'none';
     document.getElementById('form').reset();
 });
+
 
 
 
